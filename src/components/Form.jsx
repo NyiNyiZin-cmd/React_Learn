@@ -1,31 +1,14 @@
-import { useState } from "react";
+import React from 'react'
 
 const Form = () => {
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
-  const [lang, setLang] = useState("");
-  const [active, setActive] = useState(false);
-
-  const languages = ["C", "C++", "Java", "Python", "PHP", "Javascript"];
-
   return (
-    <div>
-      <form>
-        <input type="text" value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
-        <textarea placeholder="Description"></textarea>
-        <select>
-            {
-                languages.map((lang, index) => (
-                    <option key={index} value={lang}>
-                        {lang}
-                    </option>
-                ))
-            }
-        </select>
-        <button>Add Blogs</button>
-      </form>
+  <form  className='block w-full md:w-1/2'>
+      <div className='flex gap-4 w-full'>
+        <input type="text" placeholder='Add New Task' className='bg-gray-700 text-gray-200 py-2 px-3 rounded-lg w-2/3' />
+        <button type='submit' className='bg-amber-600 text-light rounded-lg w-1/3 text-white'>Add Task</button>
     </div>
-  );
-};
+  </form>
+  )
+}
 
-export default Form;
+export default Form
