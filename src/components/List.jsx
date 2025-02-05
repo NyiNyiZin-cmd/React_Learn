@@ -1,9 +1,9 @@
 import Card from "./Card";
 
-const List = ({ tasks }) => {
+const List = ({ tasks,deleteTask,updateTask }) => {
   return (
     <ul className="list-none w-full md:w-1/2 flex flex-col gap-y-4 ">
-      <Card tasks={tasks} />
+      <Card tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} />
     </ul>
   );
 };

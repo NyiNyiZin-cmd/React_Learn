@@ -1,19 +1,14 @@
 {
-    "todolist" : [
-        {
-            "id" : 1,
-            "task" : "To Learn Laravel",
-            "complete" : true
-        },
-        {
-            "id" : 2,
-            "task" : "To Learn React",
-            "complete" : false
-        },
-        {
-            "id" : 3,
-            "task" : "To Learn NodeJS",
-            "complete" : false
-        }
-    ]
+  "todolist": [
+    {
+      "id": "3",
+      "task": "To Learn NodeJS",
+      "complete": false
+    },
+    {
+      "id": "5",
+      "task": "To Learn React",
+      "complete": false
+    }
+  ]
 }

@@ -1,10 +1,16 @@
 import { BiXCircle } from "react-icons/bi";
 
-const Card = ({ tasks }) => {
+const Card = ({ tasks, deleteTask, updateTask }) => {
+
+    const handleDel = id => {
+        deleteTask(id)
+    }
+
   return (
     <>
       {tasks.map((task, index) => (
         <li
+          onDoubleClick={() => updateTask(task.id, !task.complete)}
           key={index}
           className={
             task.complete
@@ -13,9 +19,9 @@ const Card = ({ tasks }) => {
           }
         >
           <p className={task.complete ? "line-through italic" : ""}>
-            To Learn React Lesson{" "}
+            {task.task}
           </p>
-          <BiXCircle className="text-2xl" />
+          <BiXCircle className="text-2xl" onClick={() => handleDel(task.id)} />
         </li>
       ))}
     </>
